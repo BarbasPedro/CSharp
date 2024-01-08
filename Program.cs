@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +12,7 @@ namespace C_
     {
         static void Main(string[] args) // Método: Main
         {
-            Exercicio2();
+            Exercicio3();
         }
 
         static void ExemploSoma()
@@ -117,6 +118,73 @@ namespace C_
             }
 
             Console.WriteLine("Obrigado e volte sempre!");
+            Console.ReadLine();
+        }
+        static void For()
+        {
+            // for ( inicia; condição; incremento ) {}
+            for(int i=1; i<=10; i++)
+            {
+                Console.WriteLine(i);
+            }
+        }
+        static void While()
+        {
+            //while(condição)
+            string senha = "1234";
+
+            Console.WriteLine("Digite sua senha:");
+            string senhaInformada = Convert.ToString(Console.ReadLine());
+
+            while(senhaInformada != senha)
+            {
+                Console.WriteLine("Senha incorreta. Digite Novamente:");
+                senhaInformada = Convert.ToString(Console.ReadLine());
+            }
+
+            Console.WriteLine("Logado com sucesso");
+        }
+        static void DoWhile ()
+        {
+            string senha = "1234";
+            string senhaInformada = string.Empty;
+
+            do{
+                Console.Write("Digite sua senha:");
+                senhaInformada = Console.ReadLine();
+
+                if ( senhaInformada != senha)
+                {
+                    Console.WriteLine("Senha incorreta.");
+                }
+            } while(senhaInformada != senha);
+
+            Console.WriteLine("Logado com sucesso.");
+            ;
+        }
+        static void Exercicio3 ()
+        {
+            string resposta = string.Empty;
+
+            do
+            {
+                Console.Write("Escolha um numero: ");
+                int numeroEscolhido = Convert.ToInt32(Console.ReadLine());
+
+                for (int i=1; i<=10; i++)
+                {
+                    int resultado = numeroEscolhido * i;
+
+                    Console.WriteLine("{0} x {1} = {2}", numeroEscolhido, i, resultado);
+                }
+
+                Console.WriteLine();
+                Console.WriteLine("Gostaria de escolher outra? Se não, ENTER para sair.");
+
+                resposta = Console.ReadLine();
+                Console.WriteLine();
+            }while(resposta != string.Empty);
+
             Console.ReadLine();
         }
     }
