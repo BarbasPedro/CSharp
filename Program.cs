@@ -11,7 +11,7 @@ namespace C_
     {
         static void Main(string[] args) // Método: Main
         {
-            If();
+            Exercicio2();
         }
 
         static void ExemploSoma()
@@ -43,7 +43,7 @@ namespace C_
             Console.WriteLine("O total da sua compra é {0:c}", total);
             Console.ReadLine();
         }
-        static void Exercicio()
+        static void Exercicio1()
         {
             Console.WriteLine("Qual o valor da compra?");
             decimal valor = Convert.ToDecimal(Console.ReadLine());
@@ -74,6 +74,50 @@ namespace C_
                 Console.WriteLine("Boa noite!");
             }
         }
+        static void Switch()
+        {
+            int hora = DateTime.Now.Hour;
+            string mensagem = string.Empty;
 
+            switch(hora)
+            {
+                case 6:
+                    mensagem="Hora de começar";
+                    break;
+                case 10:
+                case 15:
+                    mensagem= "Hora do Intervalo";
+                    break;
+                case 12:
+                    mensagem= "Almoço";
+                    break;
+                default:
+                    mensagem= string.Empty;
+                    break;
+            }
+            Console.WriteLine("{0}", mensagem);
+            Console.ReadLine();
+        }
+        static void Exercicio2()
+        {
+            Console.Write("Qual o valor total da sua compra?");
+            decimal valorCompra = Convert.ToDecimal(Console.ReadLine());
+            int numeroParcelas = 3;
+            decimal valorParcela = valorCompra / numeroParcelas;
+            decimal valorMinimoParcelar = 1000.01m;
+
+            if  (valorCompra >= valorMinimoParcelar)
+            {
+                Console.WriteLine("É possivel parcelar sua compra em até x3");
+                Console.WriteLine("O valor da sua compra é {0:c} portanto o pagamente será x{1} de {2:c};", valorCompra, numeroParcelas , valorParcela);
+            }
+            else
+            {
+                Console.WriteLine("O valor da sua compra é {0:c} por isso o pagamento será à vista, x1 de {0:c}.", valorCompra);
+            }
+
+            Console.WriteLine("Obrigado e volte sempre!");
+            Console.ReadLine();
+        }
     }
 }

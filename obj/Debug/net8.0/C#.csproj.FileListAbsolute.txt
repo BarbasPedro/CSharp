@@ -26,3 +26,4 @@ C:\Users\Pedro\OneDrive\Área de Trabalho\Programação\C#\CSharp\bin\Debug\net8
 C:\Users\Pedro\OneDrive\Área de Trabalho\Programação\C#\CSharp\bin\Debug\net8.0\C#.pdb
 C:\Users\Pedro\OneDrive\Área de Trabalho\Programação\C#\CSharp\obj\Debug\net8.0\C#.genruntimeconfig.cache
 C:\Users\Pedro\OneDrive\Área de Trabalho\Programação\C#\CSharp\obj\Debug\net8.0\ref\C#.dll
+C:\Users\Pedro\OneDrive\Área de Trabalho\Programação\C#\CSharp\obj\Debug\net8.0\C#.sourcelink.json
