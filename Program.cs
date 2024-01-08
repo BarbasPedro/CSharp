@@ -57,17 +57,23 @@ namespace C_
         }
         static void If()
         {
-            Console.WriteLine("Digite um numero entre 1 e 10: ");
-            int n = Convert.ToInt32(Console.ReadLine());
+            int hora = DateTime.Now.Hour;
 
-            if (n<1 || n>10)
+            Console.WriteLine("{0}", hora);
+
+            if (hora < 12)
             {
-                Console.WriteLine("O numero digitado não está entre 1 e 10");
+                Console.WriteLine("Bom dia!");
+            }
+            else if (hora < 18)
+            {
+                Console.WriteLine("Boa tarde!");
             }
             else
             {
-                Console.WriteLine("Obrigado!");
+                Console.WriteLine("Boa noite!");
             }
         }
+
     }
 }
