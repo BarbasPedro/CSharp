@@ -1,0 +1,26 @@
+
+        Console.WriteLine("Tipos Primitivos");
+
+        string nome = "Pedro"
+
+        //Para declarar números:
+        short numeroPequeno = 1; //short = int16 (16 bits)
+        int numero = 100; //(32 bits) int = int32
+        long numeroGrande = 10000000; // long = int64 (64 bits)
+        byte quantidade = 20; //De 0 a 255 (16 bits)
+        double numeroDecimal = 10.11; //(16 bits)
+        decimal numeroMonetario = Convert.ToDecimal(1000.56);
+        // OU
+        decimal numeroMonetario2 = 1000.56m; //1001000.56m=Convert.ToDecimal(1000.56)
+        DateTime data = DataTime.Now; //(08-01-2024 11:34:56)
+        DateTime dataExemplo = new DateTime(2023, 01, 01);
+
+        //Formatação de data
+        Console.WriteLine("{0:d}", dataExemplo); // (":d") Força o retorno na formatação 01/01/2023
+        Console.WriteLine("{0:D}", dataExemplo); // (":D") Força o retorno na formatação Sexta-feira, 01 de Janeiro de 2023
+        Console.WriteLine("{0:ddd}", dataExemplo); // (":ddd") Retorna seg, ter, qua, etc
+        Console.WriteLine("{0:dddd}", dataExemplo); // (":dddd") Retorna segunda-feira, terça-feira, etc
+
+        //Formatação de número
+        Console.WriteLine("{0:c}, numeroMonetario"); // Retorna R$1.000.56
+      }
